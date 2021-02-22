@@ -34,7 +34,9 @@ function App() {
       <Route path="/create" component={RestaurentCreate} />
       <Route path="/search" component={RestaurentSearch} />
       <Route path="/details" component={RestaurentDetails} />
-      <Route path="/update" component={RestaurentUpdate} />
+      <Route path="/update/:id"  render={props=>(
+        <RestaurentUpdate {...props} />
+      )}  />
       <Route exact path="/" component={Home} />
 
 
